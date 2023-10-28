@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- =======================
+Main Content START -->
+<section class="py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center m-auto">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header mb-0">
+                        <h2 class="mb-0">Connexion</h2>
+                    </div>
+                    <div class="card-body mt-0">
+                        <!-- Form START -->
+                        <form class="mt-4 text-start" method="POST" action="/login">
+                            {{ form.hidden_tag() }}
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                {{ form.email(class="form-control", placeholder="Email",
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$") }}
+                            </div>
+                            <!-- Password -->
+                            <div class="mb-3 position-relative">
+                                <label class="form-label">Mot de passe</label>
+                                {{ form.password(class="form-control fakepassword", placeholder="Mot de passe",
+                                pattern="(?=.*\d)(?=.*[a-z]).{8,}") }}
+                                <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
+											<i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
+										</span>
+                            </div>
+                            <!-- Remember me -->
+                            <div class="mb-3 d-sm-flex justify-content-between">
+                                <div>
+                                    <input type="checkbox" class="form-check-input" id="rememberCheck">
+                                    <label class="form-check-label" for="rememberCheck">Se souvenir de moi?</label>
+                                </div>
+                                <a href="forgot-password.html">Mot de passe oublié ?</a>
+                            </div>
+                            <!-- Button -->
+                            <div>
+                                {{ form.submit(class="btn btn-primary w-100 mb-0") }}
+                            </div>
+                        </form>
+                        <!-- Form END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =======================
+Main Content END -->
+
+{% endblock %}

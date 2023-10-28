@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main>
+    <!-- =======================
+    Content START -->
+    <section class="pt-5">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Sidebar START -->
+                {% include "partials/sidebar-admin.html" %}
+                <!-- Sidebar END -->
+                <!-- Main content START -->
+                <div class="col-lg-8 col-xl-9">
+                    <div class="card border mb-0 border-radius-0 bg-light">
+                        <!-- Card body -->
+                        <div class="card-body">
+                            <form method="POST" action="/annonce/{{ annonce_id }}/annonce_delete">
+                                <label for="annonce_id"></label>
+                                <input type="text" id="annonce_id" name="annonce_id" required><br><br>
+                                <button type="submit">Supprimer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main content END -->
+            </div>
+        </div>
+    </section>
+    <!-- =======================
+    Content END -->
+</main>
+{% endblock %}

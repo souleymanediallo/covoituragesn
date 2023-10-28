@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main>
+
+<!-- =======================
+Content START -->
+<section class="pt-5">
+	<div class="container py-5">
+		<div class="row">
+
+			<!-- Sidebar START -->
+            {% include "partials/sidebar-admin.html" %}
+			<!-- Sidebar END -->
+
+			<!-- Main content START -->
+			<div class="col-lg-8 col-xl-9">
+
+				<form class="vstack gap-4" method="POST" action="/annonce/{{ annonce_id }}/update">
+						{{ form.hidden_tag() }}
+                        <!-- Owner Detail START -->
+                        <div class="card border mb-0 border-radius-0 bg-light">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <!-- car type -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Type de trajet *</label>
+                                        {{ form.type(class="form-control-") }}
+                                    </div>
+                                    <!-- car type -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Je suis *</label>
+                                        <div class="d-flex">
+                                            {{ form.profile(class="form-control-") }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Owner Detail END -->
+                          <!-- Owner Detail START -->
+                        <div class="card border border-radius-0 bg-light">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Départ</label>
+                                        {{ form.start_city() }}
+                                    </div>
+                                    <!-- State -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Arrivée</label>
+                                        {{ form.end_city() }}
+                                    </div>
+                                    <!-- Contact number -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Date Départ</label>
+                                        {{ form.start_date(class="form-control flatpickr flatpickr-input",
+                                        id="start_date", lang="fr") }}
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-md-3">
+                                        <label class="form-label">Heures</label>
+                                        {{ form.start_hour(class="form-control form-select js-choice") }}
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Minutes</label>
+                                        {{ form.start_minute(class="form-control form-select js-choice") }}
+                                    </div>
+                                    <!-- Contact number -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Date Retour</label>
+                                        {{ form.end_date(class="form-control flatpickr flatpickr-input",
+                                        id="end_date") }}
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="col-md-3">
+                                        <label class="form-label">Heures</label>
+                                        {{ form.end_hour(class="form-control form-select js-choice") }}
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label">Minutes</label>
+                                        {{ form.end_minute(class="form-control form-select js-choice") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Owner Detail END -->
+                        <!-- Owner Detail START -->
+                        <div class="card border border-radius-0 bg-light">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Nombre de place</label>
+                                        {{ form.seats(class="form-control", id="seats") }}
+                                    </div>
+                                    <!-- City -->
+                                    <div class="col-md-6">
+                                        <label class="form-label">Prix</label>
+                                        {{ form.price(class="form-control", id="price") }}
+                                    </div>
+                                    <!-- Address -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Owner Detail END -->
+                         <!-- Owner Detail START -->
+                        <div class="card border border-radius-0 bg-light">
+                            <!-- Card body -->
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <!-- Address -->
+                                    <div class="col-12">
+                                        <label class="form-label">Information concernant votre trajet</label>
+                                        {{ form.description(class="form-control", id="description", rows="4") }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Owner Detail END -->
+
+
+
+                        <!-- Button -->
+                        <div class="text-end">
+                            {{ form.submit(class="btn btn-primary mb-0") }}
+                        </div>
+                    </form>
+
+			</div>
+			<!-- Main content END -->
+		</div>
+	</div>
+</section>
+<!-- =======================
+Content END -->
+
+</main>
+{% endblock %}

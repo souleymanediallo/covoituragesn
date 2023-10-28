@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  covoiturage:
+    image: covoiturage
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000

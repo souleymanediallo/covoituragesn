@@ -1,0 +1,235 @@
+<div class="page-sidebar">
+                <div class="logo-wrap">
+                    <a href="/">
+                        <img src="{{ url_for('static', filename='images/logo/4.png') }}"class="img-fluid for-light" alt="">
+                        <img src="{{ url_for('static', filename='images/logo/9.png') }}"class="img-fluid for-dark" alt="">
+                    </a>
+                    <div class="back-btn d-lg-none d-inline-block">
+                        <i data-feather="chevrons-left"></i>
+                    </div>
+                </div>
+                <div class="main-sidebar">
+                    <div class="user-profile">
+                        <div class="media">
+                            <div class="change-pic">
+                                <img src="{{ url_for('static', filename='images/avatar/3.jpg') }}" class="img-fluid" alt="">
+                            </div>
+                            <div class="media-body">
+                                <a href="user-profile.html"><h6>Zack Lee</h6></a>
+                                <span class="font-roboto">zackle@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mainsidebar">
+                        <ul class="sidebar-menu custom-scrollbar">
+                            <li class="sidebar-item">
+                                <a href="index.html" class="sidebar-link only-link">
+                                    <i data-feather="airplay"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="javascript:void(0)" class="sidebar-link">
+                                    <i data-feather="grid"></i>
+                                    <span>Mes Trajets</span>
+                                </a>
+                                <ul class="nav-submenu menu-content">
+                                    <li>
+                                        <a href="add-property.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            add property
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="edit-property.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            edit property
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="listing.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            property list
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="favourites.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Favourites
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="javascript:void(0)" class="sidebar-link">
+                                    <i data-feather="users"></i>
+                                    <span>Manage users</span>
+                                </a>
+                                <ul class="nav-submenu menu-content">
+                                    <li>
+                                        <a href="user-profile.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="add-user.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Add user
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="add-user-wizard.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Add user wizard <span class="label label-shadow ms-1">new</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="edit-user.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Edit user
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="all-users.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            All users
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="javascript:void(0)" class="sidebar-link">
+                                    <i data-feather="user-plus"></i>
+                                    <span>Agents</span>
+                                </a>
+                                <ul class="nav-submenu menu-content">
+                                    <li>
+                                        <a href="agent-profile.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="add-agent.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Add agent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="add-agent-wizard.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Add agent wizard <span class="label label-shadow ms-1">new</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="edit-agent.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Edit agent
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="all-agents.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            All agents
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="agent-invoice.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Invoice
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="map.html" class="sidebar-link only-link">
+                                    <i data-feather="map-pin"></i>
+                                    <span>Map</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="javascript:void(0)" class="sidebar-link">
+                                    <i data-feather="layout"></i>
+                                    <span>Types</span>
+                                </a>
+                                <ul class="nav-submenu menu-content">
+                                    <li>
+                                        <a href="family-house.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Family House
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="cottage.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Cottage
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="apartment.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Apartment
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="condominium.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Condominium
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="reports.html" class="sidebar-link only-link">
+                                    <i data-feather="bar-chart-2"></i>
+                                    <span>Reports</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="payments.html" class="sidebar-link only-link">
+                                    <i data-feather="credit-card"></i>
+                                    <span>Payments</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="javascript:void(0)" class="sidebar-link">
+                                    <i data-feather="unlock"></i>
+                                    <span>Authentication</span>
+                                </a>
+                                <ul class="nav-submenu menu-content">
+                                    <li>
+                                        <a href="login.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            Log in
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="signup.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            sign up
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html">
+                                            <i data-feather="chevrons-right"></i>
+                                            404
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="upgrade-box">
+                                    <img src="{{ url_for('static', filename='images/svg/1.svg') }}" class="img-fluid" alt="">
+                                    <h6>Need Help</h6>
+                                    <a href="https://pixelstrap.freshdesk.com/support/home" target="_blank" class="p-0 m-0">
+                                        <span class="d-block">Raise ticket at "support@pixelstrap.com"</a>
+                                    </a>
+                                    <button type="button" onclick=" window.open('https://themeforest.net/user/pixelstrap/portfolio', '_blank');" class="btn btn-pill btn-gradient color-4 btn-sm mt-2 fw-bold">Buy Now</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>

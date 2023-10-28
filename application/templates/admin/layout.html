@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sheltos - Admin dashboard page">
+    <meta name="keywords" content="sheltos">
+    <meta name="author" content="sheltos">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+
+    <title>Sheltos - Admin dashboard page</title>
+
+   <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- animate css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}">
+
+    <!-- Template css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin.css') }}">
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- page header start -->
+        {% include 'admin/header.html' %}
+        <!-- page header end -->
+        <div class="page-body-wrapper">
+            {% include 'admin/sidebar.html' %}
+            <div class="page-body">
+                {% block content %}
+                {% endblock %}
+            </div>
+             {% include 'admin/footer.html' %}
+        </div>
+    </div>
+
+
+    <!-- latest jquery-->
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+
+    <!-- Bootstrap js-->
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- feather icon js-->
+    <script src="{{ url_for('static', filename='js/feather-icon/feather.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/feather-icon/feather-icon.js') }}"></script>
+
+    <!-- sidebar js -->
+    <script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+
+    <!-- apex chart js-->
+    <script src="{{ url_for('static', filename='js/chart/apex-chart/apex-chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chart/apex-chart/stock-prices.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/admin-dashboard.js') }}"></script>
+
+    <!--admin js -->
+    <script src="{{ url_for('static', filename='js/admin-script.js') }}" defer></script>
+
+    <!-- Customizer js-->
+    <script src="{{ url_for('static', filename='js/customizer.js') }}"></script>
+
+    <!-- Color-picker js-->
+    <script src="{{ url_for('static', filename='js/color/custom-colorpicker.js') }}"></script>
+    
+</body>
+
+</html>
